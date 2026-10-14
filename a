@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Digital Bookshelf</title>
+  <style>
+    :root {
+      --bg: #121214;
+      --card-bg: #1e1e24;
+      --accent: #6366f1;
+      --text: #f3f4f6;
+      --subtext: #9ca3af;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      margin: 0;
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 2.5rem;
+    }
+
+    header h1 {
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+      letter-spacing: -0.025em;
+    }
+
+    header p {
+      color: var(--subtext);
+      font-size: 0.95rem;
+    }
+
+    /* Book Grid Container */
+    .bookshelf {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 1.5rem;
+      width: 100%;
+      max-width: 1000px;
+    }
+
+    /* Individual Book Card */
+    .book-card {
+      background-color: var(--card-bg);
+      border-radius: 12px;
+      padding: 1.25rem;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .book-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
+      border-color: var(--accent);
+    }
+
+    .book-cover {
+      width: 100%;
+      height: 180px;
+      background: linear-gradient(135deg, #312e81, #4338ca);
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1rem;
+      font-weight: bold;
+      font-size: 1.1rem;
+      color: #ffffff;
+      text-align: center;
+      padding: 0.5rem;
+      box-sizing: border-box;
+      box-shadow: inset -4px 0 8px rgba(0,0,0,0.3);
+    }
+
+    .book-title {
+      font-size: 1rem;
+      font-weight: 600;
+      margin: 0 0 0.5rem 0;
+      line-height: 1.3;
+    }
+
+    .book-meta {
+      font-size: 0.8rem;
+      color: var(--subtext);
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .btn {
+      margin-top: 1rem;
+      background-color: var(--accent);
+      color: white;
+      text-align: center;
+      padding: 0.5rem;
+      border-radius: 6px;
+      font-size: 0.85rem;
+      font-weight: 500;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>📚 Digital Library</h1>
+    <p>Select a book below to view or download the PDF</p>
+  </header>
+
+  <div class="bookshelf">
+
+    <!-- Book Item 1 -->
+    <a class="book-card" href="CMS6_Extension1_Y12_2ed_book.pdf" target="_blank">
+      <div class="book-cover">Extension 1</div>
+      <div>
+        <h2 class="book-title">Cambridge Maths Stage 6 Extension 1</h2>
+        <div class="book-meta">
+          <span>Year 12</span>
+          <span>PDF</span>
+        </div>
+      </div>
+      <div class="btn">Open PDF</div>
+    </a>
+
+    <!-- Add more book cards here as needed -->
+
+  </div>
+
+</body>
+</html>
